@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html{
+    font-family: 'Barlow', sans-serif;
+  }
+  }
+.active-link{
+  @apply text-cyan-800 font-semibold
+}
+
+.link-text{
+  @apply font-semibold text-slate-800 hover:text-blue-600 
+}
+
+.my-btn{
+  @apply text-white px-4 py-2 rounded-md bg-cyan-600 font-semibold hover:bg-cyan-800
+}
+
+.my-btn-outline{
+  @apply border-2 box-border px-4 py-1.5 rounded-md border-cyan-600 text-cyan-600 font-semibold  transform duration-200 hover:bg-cyan-800 hover:text-white 
+}
+
+.section-title{
+  @apply text-center font-bold text-2xl lg:text-4xl text-cyan-600
+}
+
+.active-tab{
+  @apply bg-cyan-600 text-white px-3 py-2 rounded-t-md
+}
+
+.inactive-tab{
+  @apply border border-cyan-600 px-3 py-1.5 rounded-t-md
+}
