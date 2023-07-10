@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet-async";
 
 const AllToys = () => {
   const allToys = useLoaderData();
+  console.log(allToys);
   const [toys, setToys] = useState(allToys);
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -19,7 +20,9 @@ const AllToys = () => {
     if (searchText.length > 0) {
       fetch(`https://toy-town-server-sigma.vercel.app/alltoys/${searchText}`)
         .then((res) => res.json())
-        .then((data) => setToys(data));
+        .then((data) => {
+          console.log(data);
+          setToys(data)});
     } else {
       toast.error("Try any name!");
     }
@@ -74,15 +77,10 @@ const AllToys = () => {
               </tr>
             </thead>
             <tbody>
-              {toys.length > 20
-                ? toys
-                    .slice(0, 20)
-                    .map((toy, i) => (
+              {toys.map((toy, i) => (
                       <AlltoyRow key={toy._id} toy={toy} index={i}></AlltoyRow>
                     ))
-                : toys.map((toy, i) => (
-                    <AlltoyRow key={toy._id} toy={toy} index={i}></AlltoyRow>
-                  ))}
+               }
             </tbody>
           </table>
         </div>

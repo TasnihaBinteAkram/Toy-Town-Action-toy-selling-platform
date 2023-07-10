@@ -14,23 +14,21 @@ const CategoryCard = ({ toy }) => {
     
   }
   return (
-    <div className="flex flex-col justify-between rounded-md w-96 h-[500px] bg-base-100 shadow-xl mx-auto">
-      <div className="h-2/3 w-full py-4">
-        <div className="h-full w-full">
+    <div className="flex flex-col gap-4 justify-between rounded-md w-96 h-[350px] bg-base-100 shadow-xl mx-auto py-6 px-4 border">
+      <div className="h-1/2 w-full">
           <img
             src={photo}
             alt={'image of'+ name}
             className="h-full w-full object-contain"
           />
-        </div>
       </div>
-      <div className="card-body py-2 h-1/3">
+      <div className="card-body py-2 h-full">
         <h2 className="card-title">{name}</h2>
         <div className="flex justify-between">
           <p>${price}</p>
           <ToyRating>{rating}</ToyRating>
         </div>
-        <div className="card-actions w-full">
+        <div className="card-actions w-full mt-auto">
           <Link to={`/toys/${_id}`}>
             <button onClick={notify} className="my-btn">View Details</button>
           </Link>

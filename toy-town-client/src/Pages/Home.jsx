@@ -10,6 +10,7 @@ import { useNavigation } from 'react-router-dom';
 import LoadSpinner from '../Components/Spinner/LoadSpinner';
 import { Helmet } from 'react-helmet-async';
 import Services from '../Components/Services/Services';
+import ExtraBanner from '../Components/Home/ExtraBanner';
 // ..
 AOS.init();
 
@@ -33,6 +34,9 @@ const Home = () => {
             <div data-aos="fade-up" data-aos-duration="500"><Slider></Slider></div>
             <div data-aos="fade-up" data-aos-duration="500">
             <Category></Category>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="500">
+            <ExtraBanner/>
             </div>
             <div data-aos="fade-up" data-aos-duration="500">
             <BestSelling></BestSelling>

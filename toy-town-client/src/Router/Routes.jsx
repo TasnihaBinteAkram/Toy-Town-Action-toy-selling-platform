@@ -30,7 +30,7 @@ const router = createBrowserRouter([
             {
                 path:'/alltoys',
                 element: <AllToys></AllToys>,
-                loader: ()=>fetch('https://toy-town-server-sigma.vercel.app/toysbylimit/20')
+                loader: ()=>fetch('https://toy-town-server-sigma.vercel.app/toys')
             },
             {
                 path:'/toys/:id',
